@@ -21,14 +21,14 @@ var updateCart = function () {
 var addItem = function () {
   // TODO: Write this function. Remember this function has nothing to do with display. 
   // It simply is for adding an item to the cart array, no HTML involved - honest ;-)
-  debugger
+  
   var idItem=0;
   $('.cart-list').empty();
   cart.forEach(element => {
-      $('.cart-list').append('<p>'+element.name+' - '+element.price+' ('+element.amunet+')  <button type="button"  data-id="'+idItem+'" class="btn clear-item  ">Clear item</button>')
+      $('.cart-list').append('<p>'+element.name+' - '+element.price+' ('+element.amunet+')  <button type="button"  data-id="'+idItem+'" class="btn clear-item  ">  <i class="fa fa-minus"style="color:red"></i></button>')
       idItem++
 });
-clertThis()
+clearThis()
 }
 
 var clearCart = function () {
@@ -65,7 +65,7 @@ $('.add-to-cart').on('click', function () {
     amunet:1
  }
     var isNew=true;
-    debugger
+    
      for(var i=0;i<cart.length;i++)
       {
         if( cart[i].name!= undefined && cart[i].name===item.name)
@@ -89,12 +89,12 @@ $('.clear-cart').on('click', function () {
 // update the cart as soon as the page loads!
 updateCart();
 
-var  clertThis= function clear_item(){
+var  clearThis= function clear_item(){
   $('.clear-item').off()
   $('.clear-item').on('click', function () {
       var num=$(this).data().id;// המיקום במערך
       cart[num].amunet--;
-      debugger
+      
       if(cart[num].amunet==0)
        cart.splice(num,1)
      // $(this).closest('p').remove()// מחיקה מהתצוגה
