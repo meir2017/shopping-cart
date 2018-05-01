@@ -103,3 +103,27 @@ body {
 .clear-cart {
   width: 100%;
 }
+.add_new_product{
+  margin-top: 7px;}
+  .modal-body-product{
+    text-align: center;
+  }
+  .modal-body-product input {
+    margin: 10px;
+    width: 70%;
+    margin-left: 100px;
+    padding: 18px;
+  }
+  input:invalid {
+    border: 2px solid red;
+  }
+  
+  input:valid {
+    border: 2px solid black;
+  }
+  .modal-header{
+    text-align: center;
+   font-weight: bold;
+   color:blue;
+   text-shadow:2px 2px 8px  black 
+  }

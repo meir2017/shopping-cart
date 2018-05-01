@@ -19,6 +19,9 @@
           <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand" href="#">SHOPPING CART</a>
+        <span>    <button type="button" class="btn btn-primary  add_new_product" data-toggle="modal" data-target="#new_product">
+          add a new product
+          </button> </span>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
@@ -37,7 +40,7 @@
     <h1>SHOPPING CART</h1>
   </div>
 
-  <div class="container">
+  <div class="container"id="userCart">
     <div class="shopping-cart">
       <p class="cart-title">Items in Cart</p>
       <div class="cart-list"></div>
@@ -96,9 +99,8 @@
       </div>
 
     
-    </div>
-    <div class="row">
-      <div class="col-md-4">
+    
+      <div class="col-md-4" id="userCart">
         <div class="card-container">
           <div class="card item" item data-name="book" data-price="25">
             <div class="pricebox">
@@ -147,9 +149,39 @@
       </div>
     </div>
   </div>
+
+<!-- Modal a new product -->
+      <div class="modal fade" id="new_product" tabindex="-1" role="dialog" aria-labelledby="myProduct" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h1 class="modal-title" id="myProduct">Add A New Product</h>
+                  </div>
+                 <form id="myform">
+                  <div class="modal-body-product">
+                    <div class="md-form">
+                        <input type="text" class="form-control"required minlength="3"  maxlength="20" placeholder="Name product" id="nameProduct">
+                    </div>
+                    <div class="md-form">
+                        <input type="number" class="form-control"required min="5"  max="1000" placeholder="Price product" id="priceProduct">
+                    </div>
+                    <input type="file" required id="myFile">
+                    <p id="demo"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <input type="submit" class="btn btn-primary  btnSaveProduct" value="Save changes" >
+                </div>
+                 </form>
+              </div>
+          </div>
+      </div>
+                                      
+  
     <script type="text/javascript" src="jquery/dist/jquery.min.js"></script>
   <script type="text/javascript" src="bootstrap/dist/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="handlebars/dist/handlebars.min.js"></script>
   <script type="text/javascript" src="script.js"></script>
+  <script type="text/javascript" src="addItem.js"></script>
 </body>
 </html>
